@@ -1,5 +1,5 @@
 <?php
-class LineCoparison{
+class LineComparison{
     //variables
     public $x1;
     public $y1;
@@ -36,18 +36,33 @@ class LineCoparison{
     }  
 
     //function to check the equality of two lines
-    public function checkEquality(){
-        if($this->distance1 == $this->distance2){
-            echo "Two lines are equal";
+    // public function checkEquality(){
+    //     if($this->distance1 == $this->distance2){
+    //         echo "Two lines are equal";
+    //     }
+    //     else{
+    //         echo "Two lines are not equal";
+    //     }
+    // }
+
+    //function to compare two lines
+    public function compareTwoLines(){
+        $check = strcasecmp($this->distance1, $this->distance2);
+        if($check > 0){
+            echo "Line1 is greater than line2";
+        }
+        elseif($check < 0){
+            echo "Line2 is greater than line1";
         }
         else{
-            echo "Two lines are not equal";
+            echo "Line1 is equal to line2";
         }
     }
 }   
     //Object
-    $obj = new LineCoparison();
+    $obj = new LineComparison();
     $obj->userInput();
     $obj->calculateLength();
-    $obj->checkEquality();
+    //$obj->checkEquality();
+    $obj->compareTwoLines();
 ?>
