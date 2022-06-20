@@ -1,5 +1,5 @@
 <?php
-class LineCoparison{
+class LineComparison{
     //variables
     public $x1;
     public $y1;
@@ -21,7 +21,7 @@ class LineCoparison{
     }  
 }   
     //Object
-    $obj = new LineCoparison();
+    $obj = new LineComparison();
     $obj->userInput();
     echo $obj->calculateLength();
 ?>
